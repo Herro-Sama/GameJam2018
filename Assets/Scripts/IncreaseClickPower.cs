@@ -8,6 +8,8 @@ public class IncreaseClickPower : MonoBehaviour {
 
     public long buildingCost;
 
+    public long powerIncrease;
+
     public float modifierValue;
 
     private long currentCost;
@@ -22,7 +24,7 @@ public class IncreaseClickPower : MonoBehaviour {
     public void ImproveResearch()
     {
 
-        if (fundManager.GetComponent<FundsGenerator>().CanPlayerPower(currentCost) == true)
+        if (fundManager.GetComponent<FundsGenerator>().CanPlayerPower(currentCost, powerIncrease) == true)
         {
             numberOfBuildings++;
             currentCost = Mathf.FloorToInt((Mathf.Pow(buildingCost * numberOfBuildings, modifierValue)));

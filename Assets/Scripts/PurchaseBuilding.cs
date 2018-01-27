@@ -35,4 +35,9 @@ public class PurchaseBuilding : MonoBehaviour {
         return currentCost;
     }
 
+    public long ReturnBuildings()
+    {
+        return numberOfBuildings;
+    }
+
 }

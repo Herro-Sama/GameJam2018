@@ -64,12 +64,12 @@ public class FundsGenerator : MonoBehaviour {
         return false;
     }
 
-    public bool CanPlayerPower(long cost)
+    public bool CanPlayerPower(long cost, long PowerGain)
     {
         if (playerFunds >= cost)
         {
             playerFunds -= cost;
-            clickPower++;
+            clickPower += PowerGain;
             return true;
         }
         return false;
